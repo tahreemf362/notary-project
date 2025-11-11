@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Auth pages (corrected case)
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
+import Verification from "./auth/Verification";
+import Facecapture from "./auth/Facecapture";
+
 
 // Main components
 import Navbar from "./components/Navbar";
@@ -34,6 +37,8 @@ function App() {
         {/* Auth routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/verification" element={<Verification />} />
+        <Route path="/face-capture" element={<Facecapture />} />
       </Routes>
     </Router>
   );

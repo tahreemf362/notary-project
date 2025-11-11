@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [form, setForm] = useState({
@@ -9,6 +9,7 @@ export default function Signup() {
     password: "",
   });
 
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -16,6 +17,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("User Data:", form);
+    navigate("/verification");
   };
 
   return (
